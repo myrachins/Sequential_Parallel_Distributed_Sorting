@@ -4,9 +4,6 @@ public class AppSettings {
 
     private AppSettings() { }
 
-    public static final String CLIENT_INET_ADDRESS = "localhost";
-    public static final int CLIENT_PORT = 4000;
-
     private static String serverInetAddress;
     private static int serverPort;
 
