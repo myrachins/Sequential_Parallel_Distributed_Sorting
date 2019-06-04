@@ -31,12 +31,14 @@ public class Main {
     }
 
     private static void parseArguments(String[] args) {
-        if (args.length != 2) {
+        if (args.length != 4) {
             throw new IllegalArgumentException("Number of parameters should be 2");
         }
         try {
             AppSettings.setRandomListSize(Integer.parseInt(args[0]) * 2);
             AppSettings.setUpperBoundRandom(Integer.parseInt(args[1]));
+            AppSettings.setInetAddress(args[2]);
+            AppSettings.setServerPort(Integer.parseInt(args[3]));
             AppSettings.generateRandomList();
         } catch (NumberFormatException exc) {
             throw new IllegalArgumentException("Can't parse param: " + exc.getMessage());

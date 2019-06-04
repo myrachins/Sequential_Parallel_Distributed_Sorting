@@ -15,6 +15,7 @@ public class AppSettings {
     private static int upperBoundRandom;
     private static List<Integer> randomList;
     private static int serverPort;
+    private static String InetAddress;
 
     public synchronized static int getRandomListSize() {
         return randomListSize;
@@ -50,5 +51,13 @@ public class AppSettings {
 
     public static void setServerPort(int serverPort) {
         AppSettings.serverPort = serverPort;
+    }
+
+    public static String getInetAddress() {
+        return InetAddress;
+    }
+
+    public static void setInetAddress(String inetAddress) {
+        InetAddress = inetAddress;
     }
 }
