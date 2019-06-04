@@ -1,6 +1,10 @@
 package ru.hse.edu.myurachinskiy;
 
+import ru.hse.edu.myurachinskiy.sortings.OrdinaryMergeSort;
 import ru.hse.edu.myurachinskiy.utils.AppSettings;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -8,7 +12,20 @@ public class Main {
             parseArguments(args);
         } catch (Exception exc) {
             System.out.println("Invalid input parameters. Message: " + exc.getMessage());
+            return;
         }
+        List<Runnable> tasks = createSortingList();
+        for(Runnable task : tasks) {
+            task.run();
+        }
+        System.out.println("All tasks have been completed");
+    }
+
+    private static List<Runnable> createSortingList() {
+        List<Runnable> algorithms = new ArrayList<>();
+        algorithms.add(new OrdinaryMergeSort());
+
+        return algorithms;
     }
 
     private static void parseArguments(String[] args) {
