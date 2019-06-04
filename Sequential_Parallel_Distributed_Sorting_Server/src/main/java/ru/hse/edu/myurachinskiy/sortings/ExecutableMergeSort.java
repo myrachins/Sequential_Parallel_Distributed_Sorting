@@ -5,6 +5,8 @@ import ru.hse.edu.myurachinskiy.utils.AppSettings;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public abstract class ExecutableMergeSort implements Runnable {
 
@@ -17,5 +19,15 @@ public abstract class ExecutableMergeSort implements Runnable {
         } catch (IOException exc) {
             System.out.println("Can't write to file. Message: " + exc.getMessage());
         }
+    }
+
+    protected List<Integer> getLeftPart() {
+        List<Integer> randomNumbers = AppSettings.getRandomList();
+        return new ArrayList<>(randomNumbers.subList(0, randomNumbers.size() / 2));
+    }
+
+    protected List<Integer> getRightPart() {
+        List<Integer> randomNumbers = AppSettings.getRandomList();
+        return new ArrayList<>(randomNumbers.subList(randomNumbers.size() / 2, randomNumbers.size()));
     }
 }

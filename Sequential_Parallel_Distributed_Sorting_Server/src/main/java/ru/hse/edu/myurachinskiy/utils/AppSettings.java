@@ -14,6 +14,7 @@ public class AppSettings {
     private static int randomListSize;
     private static int upperBoundRandom;
     private static List<Integer> randomList;
+    private static int serverPort;
 
     public synchronized static int getRandomListSize() {
         return randomListSize;
@@ -41,5 +42,13 @@ public class AppSettings {
 
     public synchronized static List<Integer> getRandomList() {
         return randomList;
+    }
+
+    public static int getServerPort() {
+        return serverPort;
+    }
+
+    public static void setServerPort(int serverPort) {
+        AppSettings.serverPort = serverPort;
     }
 }

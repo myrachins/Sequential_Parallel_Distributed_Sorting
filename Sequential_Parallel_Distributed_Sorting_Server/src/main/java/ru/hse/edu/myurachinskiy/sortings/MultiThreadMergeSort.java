@@ -36,7 +36,7 @@ public class MultiThreadMergeSort extends ExecutableMergeSort {
             long commonEndTime = System.nanoTime();
 
             saveTimeLog("Part 1: sorting time", leftDuration);
-            saveTimeLog("Part 1: sorting time", result.rightPartDuration);
+            saveTimeLog("Part 2: sorting time", result.rightPartDuration);
             saveTimeLog("Sorted combining time", mergeDuration);
             saveTimeLog("Total sorting time", commonEndTime - commonStartTime);
         } catch (InterruptedException exc) {
