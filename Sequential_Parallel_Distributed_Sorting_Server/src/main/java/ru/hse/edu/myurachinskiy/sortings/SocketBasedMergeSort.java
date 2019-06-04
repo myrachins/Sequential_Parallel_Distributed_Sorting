@@ -28,11 +28,13 @@ public class SocketBasedMergeSort extends ExecutableMergeSort  {
         try {
             ServerSocket server = new ServerSocket(AppSettings.getServerPort());
 
+            System.out.println("Waiting to client be online...");
+
             long commonStartTime = System.nanoTime(); // common sorting start
 
             try (Socket socket = server.accept()) {
-                ObjectInputStream is = new ObjectInputStream(socket.getInputStream());
                 ObjectOutputStream os = new ObjectOutputStream(socket.getOutputStream());
+                ObjectInputStream is = new ObjectInputStream(socket.getInputStream());
 
                 Thread clientThread = new Thread(() -> {
                     try {
@@ -56,7 +58,7 @@ public class SocketBasedMergeSort extends ExecutableMergeSort  {
                     return;
                 }
 
-                long receiveTime = result.responseMessage.getSentTime();
+                long receiveTime = System.nanoTime();
 
                 mergeTimer.setStrategy(() -> sort.mergeLists(result.leftPart, result.responseMessage.getNumbers())); // merging lists
                 long mergeDuration = mergeTimer.testStrategy();

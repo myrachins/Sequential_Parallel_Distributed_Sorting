@@ -2,12 +2,13 @@ package ru.hse.edu.myurachinskiy;
 
 import ru.hse.edu.myurachinskiy.sortings.MultiThreadMergeSort;
 import ru.hse.edu.myurachinskiy.sortings.OrdinaryMergeSort;
+import ru.hse.edu.myurachinskiy.sortings.SocketBasedMergeSort;
 import ru.hse.edu.myurachinskiy.utils.AppSettings;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class MainServer {
     public static void main(String[] args) {
         try {
             parseArguments(args);
@@ -27,13 +28,14 @@ public class Main {
         List<Runnable> algorithms = new ArrayList<>();
         algorithms.add(new OrdinaryMergeSort());
         algorithms.add(new MultiThreadMergeSort());
+        algorithms.add(new SocketBasedMergeSort());
 
         return algorithms;
     }
 
     private static void parseArguments(String[] args) {
         if (args.length != 4) {
-            throw new IllegalArgumentException("Number of parameters should be 2");
+            throw new IllegalArgumentException("Number of parameters should be 4");
         }
         try {
             AppSettings.setRandomListSize(Integer.parseInt(args[0]) * 2);

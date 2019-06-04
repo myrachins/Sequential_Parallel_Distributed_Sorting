@@ -20,12 +20,11 @@ public class MergeSortClient {
 
         try {
             try(Socket socket = new Socket(AppSettings.getServerInetAddress(), AppSettings.getServerPort())) {
-                ObjectInputStream is = new ObjectInputStream(socket.getInputStream());
                 ObjectOutputStream os = new ObjectOutputStream(socket.getOutputStream());
+                ObjectInputStream is = new ObjectInputStream(socket.getInputStream());
 
                 Message requestMessage = (Message) is.readObject();
                 long receiveTime = System.nanoTime();
-                System.out.println("Client: Message has been gotten");
 
                 sortingTimer.setStrategy(() -> result.sortedNumbers = sort.sortList(requestMessage.getNumbers()));
                 long sortingDuration = sortingTimer.testStrategy();
@@ -34,7 +33,6 @@ public class MergeSortClient {
                         result.sortedNumbers, System.nanoTime(), sortingDuration,
                         receiveTime - requestMessage.getSentTime());
                 os.writeObject(responseMessage);
-                System.out.println("Client: Response message has been sent");
             }
         } catch (IOException exc) {
             System.out.println("Error with server. Message: " + exc.getMessage());

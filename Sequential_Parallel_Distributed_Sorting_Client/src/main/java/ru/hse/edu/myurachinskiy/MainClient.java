@@ -3,7 +3,7 @@ package ru.hse.edu.myurachinskiy;
 import ru.hse.edu.myurachinskiy.utils.AppSettings;
 import ru.hse.edu.myurachinskiy.utils.MergeSortClient;
 
-public class Main {
+public class MainClient {
     public static void main(String[] args) {
         try {
             parseArguments(args);
