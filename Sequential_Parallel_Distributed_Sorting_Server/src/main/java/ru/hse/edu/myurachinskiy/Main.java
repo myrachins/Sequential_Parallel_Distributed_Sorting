@@ -18,6 +18,7 @@ public class Main {
         List<Runnable> tasks = createSortingList();
         for(Runnable task : tasks) {
             task.run();
+            System.out.println("\n" + "---------" + "\n");
         }
         System.out.println("All tasks have been completed");
     }
