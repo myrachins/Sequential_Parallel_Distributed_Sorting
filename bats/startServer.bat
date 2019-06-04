@@ -1,0 +1,1 @@
+java -jar ../out/artifacts/Sequential_Parallel_Distributed_Sorting_Server_jar/Sequential_Parallel_Distributed_Sorting_Server.jar 100 10 localhost 4444
