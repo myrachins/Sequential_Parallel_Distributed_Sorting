@@ -3,7 +3,7 @@ package ru.hse.edu.myurachinskiy.utils;
 public class AppSettings {
     private AppSettings() { }
 
-    public static final String FILE_NAME = "results.txt";
+    public static final String FILE_NAME = "docs/results.txt";
 
     private static int n;
     private static int m;

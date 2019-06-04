@@ -1,0 +1,2 @@
+Sequential sorting time: 383925
+Sequential sorting time: 353775
