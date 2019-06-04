@@ -1,3 +1,5 @@
+package ru.hse.edu.myurachinskiy;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -23,7 +25,7 @@ class MergeSortTest {
     }
 
     private List<Integer> generateRandomList(int size) {
-        ArrayList<Integer> numbers = new ArrayList<Integer>();
+        ArrayList<Integer> numbers = new ArrayList<>();
 
         for (int i = 0; i < size; ++i) {
             numbers.add(random.nextInt());

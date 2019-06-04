@@ -1,3 +1,5 @@
+package ru.hse.edu.myurachinskiy;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -7,8 +9,8 @@ public final class MergeSort {
             return numbers;
         }
         int middle = numbers.size() / 2;
-        List<Integer> leftPart = sortList(new ArrayList<Integer>(numbers.subList(0, middle)));
-        List<Integer> rightPart = sortList(new ArrayList<Integer>(numbers.subList(middle, numbers.size())));
+        List<Integer> leftPart = sortList(new ArrayList<>(numbers.subList(0, middle)));
+        List<Integer> rightPart = sortList(new ArrayList<>(numbers.subList(middle, numbers.size())));
 
         return mergeLists(leftPart, rightPart);
     }
@@ -16,7 +18,7 @@ public final class MergeSort {
     public List<Integer> mergeLists(List<Integer> first, List<Integer> second) {
         int newSize = first.size() + second.size();
         int firstCounter = 0, secondCounter = 0;
-        ArrayList<Integer> result = new ArrayList<Integer>();
+        ArrayList<Integer> result = new ArrayList<>();
 
         first.add(Integer.MAX_VALUE);
         second.add(Integer.MAX_VALUE);

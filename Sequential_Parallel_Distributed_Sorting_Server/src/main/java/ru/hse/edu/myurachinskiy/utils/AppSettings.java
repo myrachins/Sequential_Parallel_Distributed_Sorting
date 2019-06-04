@@ -1,4 +1,4 @@
-package utils;
+package ru.hse.edu.myurachinskiy.utils;
 
 public class AppSettings {
     private AppSettings() { }

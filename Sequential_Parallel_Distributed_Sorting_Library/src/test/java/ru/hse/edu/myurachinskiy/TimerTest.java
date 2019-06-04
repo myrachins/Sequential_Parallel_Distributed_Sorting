@@ -1,4 +1,7 @@
+package ru.hse.edu.myurachinskiy;
+
 import org.junit.jupiter.api.Test;
+import ru.hse.edu.myurachinskiy.Timer;
 
 class TimerTest {
 

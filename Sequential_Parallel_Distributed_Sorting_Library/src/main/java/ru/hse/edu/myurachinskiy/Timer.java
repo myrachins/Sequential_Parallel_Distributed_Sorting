@@ -1,3 +1,5 @@
+package ru.hse.edu.myurachinskiy;
+
 public class Timer {
     private Runnable strategy;
 

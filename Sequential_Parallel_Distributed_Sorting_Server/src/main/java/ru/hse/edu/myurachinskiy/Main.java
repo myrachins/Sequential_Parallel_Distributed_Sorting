@@ -1,4 +1,6 @@
-import utils.AppSettings;
+package ru.hse.edu.myurachinskiy;
+
+import ru.hse.edu.myurachinskiy.utils.AppSettings;
 
 public class Main {
     public static void main(String[] args) {
