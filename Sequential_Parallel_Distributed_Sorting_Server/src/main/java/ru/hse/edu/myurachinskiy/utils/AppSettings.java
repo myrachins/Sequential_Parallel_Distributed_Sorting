@@ -5,22 +5,22 @@ public class AppSettings {
 
     public static final String FILE_NAME = "docs/results.txt";
 
-    private static int n;
-    private static int m;
+    private static int randomListSize;
+    private static int upperBoundRandom;
 
-    public synchronized static int getN() {
-        return n;
+    public synchronized static int getRandomListSize() {
+        return randomListSize;
     }
 
-    public synchronized static void setN(int n) {
-        AppSettings.n = n;
+    public synchronized static void setRandomListSize(int randomListSize) {
+        AppSettings.randomListSize = randomListSize;
     }
 
-    public synchronized static int getM() {
-        return m;
+    public synchronized static int getUpperBoundRandom() {
+        return upperBoundRandom;
     }
 
-    public synchronized static void setM(int m) {
-        AppSettings.m = m;
+    public synchronized static void setUpperBoundRandom(int upperBoundRandom) {
+        AppSettings.upperBoundRandom = upperBoundRandom;
     }
 }

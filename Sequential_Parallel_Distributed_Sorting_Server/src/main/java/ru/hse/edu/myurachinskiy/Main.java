@@ -33,8 +33,8 @@ public class Main {
             throw new IllegalArgumentException("Number of parameters should be 2");
         }
         try {
-            AppSettings.setN(Integer.parseInt(args[0]));
-            AppSettings.setM(Integer.parseInt(args[1]));
+            AppSettings.setRandomListSize(Integer.parseInt(args[0]) * 2);
+            AppSettings.setUpperBoundRandom(Integer.parseInt(args[1]));
         } catch (NumberFormatException exc) {
             throw new IllegalArgumentException("Can't parse param: " + exc.getMessage());
         }

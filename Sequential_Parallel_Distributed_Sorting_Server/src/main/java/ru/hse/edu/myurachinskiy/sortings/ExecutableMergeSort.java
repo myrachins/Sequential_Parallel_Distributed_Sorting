@@ -15,8 +15,8 @@ public abstract class ExecutableMergeSort implements Runnable {
     protected List<Integer> createRandomList() {
         List<Integer> numbers = new ArrayList<>();
 
-        for (int i = 0; i < AppSettings.getN(); ++i) {
-            numbers.add(random.nextInt(AppSettings.getM()));
+        for (int i = 0; i < AppSettings.getRandomListSize(); ++i) {
+            numbers.add(random.nextInt(AppSettings.getUpperBoundRandom()));
         }
 
         return numbers;
