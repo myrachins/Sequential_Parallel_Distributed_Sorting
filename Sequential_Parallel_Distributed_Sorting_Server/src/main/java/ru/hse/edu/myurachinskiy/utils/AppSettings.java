@@ -9,7 +9,7 @@ public class AppSettings {
 
     private static Random random = new Random();
 
-    public static final String FILE_NAME = "docs/results.txt";
+    public static final String FILE_NAME = "results.txt";
 
     private static int randomListSize;
     private static int upperBoundRandom;

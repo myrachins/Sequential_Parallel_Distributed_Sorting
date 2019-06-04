@@ -42,6 +42,9 @@ public class MainServer {
             AppSettings.setUpperBoundRandom(Integer.parseInt(args[1]));
             AppSettings.setInetAddress(args[2]);
             AppSettings.setServerPort(Integer.parseInt(args[3]));
+            if (AppSettings.getRandomListSize() <= 0 || AppSettings.getUpperBoundRandom() <= 0) {
+                throw new IllegalArgumentException("List size and upper bound for random should be more than 0");
+            }
             AppSettings.generateRandomList();
         } catch (NumberFormatException exc) {
             throw new IllegalArgumentException("Can't parse param: " + exc.getMessage());
