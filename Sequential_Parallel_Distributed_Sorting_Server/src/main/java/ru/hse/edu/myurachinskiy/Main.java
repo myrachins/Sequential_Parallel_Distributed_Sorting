@@ -1,5 +1,6 @@
 package ru.hse.edu.myurachinskiy;
 
+import ru.hse.edu.myurachinskiy.sortings.MultiThreadMergeSort;
 import ru.hse.edu.myurachinskiy.sortings.OrdinaryMergeSort;
 import ru.hse.edu.myurachinskiy.utils.AppSettings;
 
@@ -24,6 +25,7 @@ public class Main {
     private static List<Runnable> createSortingList() {
         List<Runnable> algorithms = new ArrayList<>();
         algorithms.add(new OrdinaryMergeSort());
+        algorithms.add(new MultiThreadMergeSort());
 
         return algorithms;
     }
@@ -35,6 +37,7 @@ public class Main {
         try {
             AppSettings.setRandomListSize(Integer.parseInt(args[0]) * 2);
             AppSettings.setUpperBoundRandom(Integer.parseInt(args[1]));
+            AppSettings.generateRandomList();
         } catch (NumberFormatException exc) {
             throw new IllegalArgumentException("Can't parse param: " + exc.getMessage());
         }

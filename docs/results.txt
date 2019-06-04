@@ -1,3 +1,45 @@
 Sequential sorting time: 383925
 Sequential sorting time: 353775
 Sequential sorting time: 400282
+Sequential sorting time: 392264
+Sequential sorting time: 605235
+Sequential sorting time: 417282
+Part 1: sorting time: 50676
+Part 1: sorting time: 37526
+Sorted combining time: 20848
+Total sorting time: 1075118
+Sequential sorting time: 837129
+Part 1: sorting time: 53243
+Part 1: sorting time: 54847
+Sorted combining time: 24376
+Total sorting time: 1128361
+Sequential sorting time: 13371617
+Part 1: sorting time: 1106551
+Part 1: sorting time: 531144
+Sorted combining time: 35923
+Total sorting time: 3616976
+Sequential sorting time: 8446667
+Part 1: sorting time: 3542564
+Part 1: sorting time: 3575600
+Sorted combining time: 151710
+Total sorting time: 8857213
+Sequential sorting time: 6064537
+Part 1: sorting time: 770736
+Part 1: sorting time: 782283
+Sorted combining time: 37847
+Total sorting time: 1806082
+Sequential sorting time: 7945030
+Part 1: sorting time: 1081532
+Part 1: sorting time: 1825326
+Sorted combining time: 102957
+Total sorting time: 3909169
+Sequential sorting time: 27135818
+Part 1: sorting time: 5885564
+Part 1: sorting time: 7421585
+Sorted combining time: 272950
+Total sorting time: 11567459
+Sequential sorting time = 5990125
+Part 1: sorting time = 2718585
+Part 1: sorting time = 7789472
+Sorted combining time = 81788
+Total sorting time = 63196842772
