@@ -3,7 +3,7 @@
 ## This task is a part of the discipline "Software Construction", SE, HSE
 
 ## Structure of the project
-* `/docs` - the task
+* `/docs` - the task and video
 * `/bats` - bats files for testing
 * `/out/artifacts` - jars
 * `/Sequential_Parallel_Distributed_Sorting_Client` - client application
@@ -16,6 +16,8 @@
    - Ordinary sort.
    - Multi thread approach.
    - Delegating sort to the client applications.
+
+More details about the task could be found in `/docs`.
 
 ## Example of execution
 You can simply use `.bat` files for testing. Otherwise execute jar files from `/out/artifacts` directory.
